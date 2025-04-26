@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+    :root {
+      --bg-color : #0b192e;
+      --nav-color: #09192F;
+      --secondary: #172A46;
+      --font-color-large: #C4CEEE;
+      --font-color-medium: #7E8BA9;
+      --font-color-small: #8790B1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .blog-title {
+      color: crimson;
+    }
+
+    body{
+      max-width: 100%;
+      margin: 20px auto;
+      padding: 0 20px;
+      font-family: "Source Code Pro", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      background-color: var(--bg-color);
+    }
+    p, h1, h2, h3, a, ul{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      color: var(--font-color-large);
+    }
+
+    /* nav & footer styles */
+    nav{
+      background-color: var(--nav-color);
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding: 0 30px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    nav li{
+      list-style-type: none;
+      margin-left: 20px;
+    }
+    nav h1{
+      font-size: 3em;
+    }
+    nav p, nav a{
+      color: #777;
+      font-weight: 400;
+      font-size: 22px;
+      transition: color .5s linear;
+    }
+
+    nav a:hover {
+      color: crimson;
+      font-weight: 700;
+    }
+
+    footer{
+      color: #777;
+      text-align: center;
+      margin: 80px auto 20px;
+    }
+    h2{
+      margin-bottom: 40px;
+    }
+    h3{
+      text-transform: capitalize;
+      margin-bottom: 8px;
+    }
+
+    /* index styles */
+
+    h2 {
+      text-align: center;
+    }
+
+    .blogs .card .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--font-color-large);
+      white-space: nowrap; /* Prevents the text from wrapping to a new line */
+      overflow: hidden; /* Hides the overflowing text */
+      text-overflow: ellipsis; /* Adds the ellipsis when the text overflows */
+    }
+
+    .blogs a:hover h3{
+      color: crimson;
+    }
+
+    .blogs .card .snippet {
+      font-size: 16px;
+      color: var(--font-color-medium);
+      white-space: nowrap; /* Prevents the text from wrapping */
+      overflow: hidden; /* Hides the overflowing text */
+      text-overflow: ellipsis; /* Adds the ellipsis when the text overflows */
+    }
+
+    .blogs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blogs .container {
+      max-width: 1400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+      column-gap: 20px;
+      row-gap: 20px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .blogs .card {
+      height: 400px;
+      width: 400px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--secondary);
+      transition: transform .3s ease-in-out;
+    }
+
+    .blogs .card:hover {
+      transform: scale(1.05);
+    }
+
+    .blogs .no-blogs {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      text-align: center;    
+    }
+
+    .blogs .no-blogs p {
+      color: crimson;
+      font-size: 24px;
+    }
+    
+    /* details styles */
+    .details{
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .details .content {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      padding: 0 20px;
+    }
+    
+    .details .content p {
+      text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
+
+    .buttons {
+      color: crimson;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      padding: 8px;
+    }
+
+    .buttons .delete {
+      color: crimson;
+      margin-right: 15px;
+    }
+
+    .delete:hover{
+      color: rgba(220, 20, 60, 0.571);
+      cursor: pointer;
+    }
+
+    .update:hover {
+      color: var(--font-color-small);
+      box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    }
+
+    /* about styles */
+    .about p {
+      margin-bottom: 40px;
+    }
+
+    .about {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .about .about-wrapper{
+      max-width: 80%;
+    }
+
+    /* create styles */
+    .create-blog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .create-blog .create-container {
+      padding: 50px;
+      width: 400px;
+      border-radius: 10px;
+      background-color: var(--secondary);
+    }
+    .create-blog form{
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .create-blog input,
+    .create-blog textarea{
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      background-color: var(--font-color-large);
+      border: none;
+    }
+    .create-blog label{
+      display: block;
+      margin-top: 24px;
+      color: var(--font-color-large);
+    }
+    textarea{
+      height: 120px;
+    }
+    .create-blog button{
+      margin-top: 20px;
+      background: crimson;
+      color: white;
+      padding: 6px;
+      border: 0;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    /* error styles */
+    .error-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      text-align: center;  
+    }
+
+    .error-container .not-found{
+      color: crimson;
+      font-size: 24px;
+    }
